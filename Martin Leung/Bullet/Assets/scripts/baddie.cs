@@ -6,16 +6,19 @@ public class baddie : MonoBehaviour
 {
     [SerializeField]
     private Transform target;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(target,Vector3.left);
+        transform.right = target.position - transform.position;
+        rb.linearVelocity = target.position - transform.position;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
