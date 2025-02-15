@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float hp = 10000f;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,5 +44,17 @@ public class PlayerMovement : MonoBehaviour
             position.x += 0.25f;
         }
         transform.position = position;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "anime")
+        {
+            hp -= 100f;
+            if (hp <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }

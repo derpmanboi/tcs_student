@@ -7,6 +7,7 @@ public class baddie : MonoBehaviour
     [SerializeField]
     private Transform target;
     private Rigidbody2D rb;
+    private float hp = 100f;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +26,10 @@ public class baddie : MonoBehaviour
     {
         if (collision.gameObject.tag == "boulit")
         {
-            Destroy(gameObject);
+            hp -= 10f;
+            if (hp <= 0) {
+                Destroy(gameObject);
+            }
         }
     }
 }
