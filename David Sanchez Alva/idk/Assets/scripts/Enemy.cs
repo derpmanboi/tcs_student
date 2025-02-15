@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemymovement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [SerializeField] private Transform[] nodes;
     [SerializeField] private float movespeed = 2f;
-    [SerializeField]
-    private int health=100;
+    [SerializeField] private int health = 100;
+
     private int current_node = 0;
     [SerializeField] private GameObject market;
     void Update()

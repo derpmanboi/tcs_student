@@ -112,7 +112,7 @@ MonoBehaviour:
   - {fileID: 2193339245245586646, guid: 6d77e4aee059a5f43b9d85a085a0353a, type: 3}
   movespeed: 2
   health: 100
-  market: {fileID: 2206482241390118356, guid: 5355d9156f517664692735a89ada2ccf, type: 3}
+  market: {fileID: 43212410855990698, guid: 5355d9156f517664692735a89ada2ccf, type: 3}
 --- !u!61 &6900893502808301695
 BoxCollider2D:
   m_ObjectHideFlags: 0
