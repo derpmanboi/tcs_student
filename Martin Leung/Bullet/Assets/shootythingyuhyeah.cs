@@ -9,12 +9,13 @@ public class shootythingyuhyeah : MonoBehaviour
     {
         Transform target = GameObject.FindGameObjectWithTag("Player").transform;
         transform.LookAt(target.transform, transform.up);
-        rb = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.AddRelativeForce(Vector3.forward * 10);
+
+
     }
 }

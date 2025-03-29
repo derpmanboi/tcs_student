@@ -23,7 +23,7 @@ public class xiaohongshu : MonoBehaviour
         if (dist < AttackingDistance)
         {
             if (Time.time >= clok) {
-                Instantiate(dollar, transform.position, transform.rotation);
+                Instantiate(dollar, transform.position + transform.up * 2, transform.rotation);
                 clok = Time.time + wantabreakfromtheAds;
              }
         }
