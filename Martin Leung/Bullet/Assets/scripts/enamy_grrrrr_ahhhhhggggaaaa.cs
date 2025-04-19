@@ -17,7 +17,7 @@ public class enamy_grrrrr_ahhhhhggggaaaa : MonoBehaviour
     void Update()
     {
         sigma += Time.deltaTime;
-        if (sigma > 0.05f)
+        if (sigma > 1.25)
         {
             Instantiate(skibidi, transform.position, transform.rotation);
             sigma = 0f;
